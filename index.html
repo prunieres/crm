@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <h1>Notre super CRM</h1>
+        <ul>
+            <li><a href="">Listing</a></li>
+            <li><a href="">Ajouter clients</a></li>
+            <li><a href="">Ajouter entreprises</a></li>
+        </ul>
+    </nav>
+    <h2>Listing clients/Entreprises</h2>
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#clients">Clients(3)</a></li>
+            <li><a data-toggle="tab" href="#entreprises">Entreprises(4)</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="clients" class="tab-pane fade in active">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recherche" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <button>Search</button>
+                    <button>Reset</button>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap" />
+                        <h3 class="card title">
+                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  TOTO
+                            </button>
+                        </h3>
+                        <p>3rue de la tour carre</p>
+                        <a href="#">Irish Pub</a>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap">
+                        <h3 class="card title">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  TOTO
+                              </button>
+                          </h3>
+                        <p>3rue de la place ronde</p>
+                        <a href="#">la taverne</a>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap">
+                        <h3 class="card title">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  TOTO
+                              </button>
+                          </h3>
+                        <p>3rue du stade</p>
+                        <a href="#">agro service</a>
+                    </div>
+                </div><!-- accordeon -->
+            </div>
+            <!-- tab-pane-client -->
+        </div>
+        <!-- tab-content -->
+
+        <div class="tab-content">
+            <div id="entreprises" class="tab-pane fade">
+                <div id="#entreprises" class="tab-pane fade">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recherche" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <button>Search</button>
+                        <button>Reset</button>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap">
+                            <h3 class="card title">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Num'n Cop
+                              </button>
+                          </h3>
+
+                            <p>adresse 1</p>
+                            <a href="#">Nom du salarié1</a>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap">
+                            <h3 class="card title">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Mairie de Mende
+                                </button>
+                            </h3>
+                            <p>adresse 2</p>
+                            <a href="#">Nom du salarié2</a>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap">
+                            <h3 class="card title">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Conseil départemental
+                                </button>
+                            </h3>
+                            <p>adresse 3</p>
+                            <a href="#">Nom du salarié3</a>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap">
+                            <h3 class="card title">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Irish pub
+                                </button>
+                            </h3>
+                            <p>adresse 4</p>
+                            <a href="#">Nom du salarié4</a>
+                        </div>
+                        <!-- card -->
+                    </div>
+                </div>
+                <!-- tab-entreprises -->
+            </div>
+            <!-- tab-pan-menu -->
+        </div>
+        <!-- tab-content -->
+
+    </div>
+    <!--container-->
+    <script src="node_modules/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
