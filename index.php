@@ -33,15 +33,35 @@
                   <button>Search</button>
                   <button>Reset</button>
               </div>
-          </div>
+                  <div class="accordion" id="accordionExample">
+                      <div class="card">
+                          <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+                          <h3 class="card title">toto yoyupi</h3>
+                          <p>3rue de la tour carre</p>
+                          <a href="#">Irish Pub</a>
+                      </div>
+                      <div class="card">
+                          <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+                          <h3 class="card title">tata yoyo</h3>
+                          <p>3rue de la place ronde</p>
+                          <a href="#">la taverne</a>
+                      </div>
+                      <div class="card">
+                          <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+                          <h3 class="card title">tutu maurice</h3>
+                          <p>3rue du stade</p>
+                          <a href="#">agro service</a>
+                      </div>
+                  </div>
+            </div>
+        </div> <!-- tab-content -->
 
         <div id="menu1" class="tab-pane fade">
           <h3>Entreprises(4)</h3>
           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
 
-      </div>
-</div>
+    </div>
     <script src="node_modules/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
