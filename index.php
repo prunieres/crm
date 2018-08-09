@@ -7,11 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-
 </head>
 
 <body>
+    <?php
+    function debug($array){
+            echo '<pre>';
+            print_r($array);
+            echo '</pre>';
+        }
+        $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
+        $lignes = $dbh->query('SELECT * from client WHERE entreprise_id=2');
 
+        foreach ($lignes as $ligne) {
+            debug($ligne);
+         }
+    ?>
     <div class="container">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -32,12 +43,10 @@
                 </ul>
             </div>
         </nav>
-
-
         <h1>Listing clients/Entreprises</h2>
         <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#clients">Clients(3)</a></li>
-            <li><a data-toggle="tab" href="#entreprise">Entreprises(4)</a></li>
+            <li class="nav-item active"><a data-toggle="tab" href="#clients">Clients(3)</a></li>
+            <li class="nav-item"><a data-toggle="tab" href="#entreprise">Entreprises(4)</a></li>
         </ul>
 
         <div class="tab-content">
@@ -184,10 +193,6 @@
         </div>
         <script src="node_modules/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.js" crossorigin="anonymous"></script>
-
-
-
-
 </body>
 
 </html>
