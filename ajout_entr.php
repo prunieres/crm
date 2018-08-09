@@ -12,12 +12,15 @@
 
 <body>
     <?php
-    $dbh = new PDO ('mysql:host=localhost;dbname=crm2','admin', 'xu10j4rs');
+    $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
+    // $dbh = new PDO ('mysql:host=localhost;dbname=crm2','admin', 'xu10j4rs');
 
     if (isset($_POST['denomination'])&&(isset($_POST['address']))){
         $denomination=$_POST['denomination'];
         $address=$_POST['address'];
         echo $denomination." ".$address;
+        $insertLine = $dbh->prepare("INSERT INTO `entreprise` (`id`, `nom_entreprise`, `adresse_entreprise`, `img_entreprise`) VALUES (NULL, '$denomination', '$address', '')");
+        $insertLine->execute();
     }
 
     ?>

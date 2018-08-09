@@ -10,6 +10,21 @@
 </head>
 
 <body>
+    <?php
+    $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
+    // $dbh = new PDO ('mysql:host=localhost;dbname=crm2','admin', 'xu10j4rs');
+
+    // if (isset($_POST['fname'])&&(isset($_POST['name'])&&(isset($_POST['address'])&&(isset($_POST['societe']))){
+    //     $fname=$_POST['fname'];
+    //     $name=$_POST['name'];
+    //     $address=$_POST['address'];
+    //     $societe=$_POST['societe'];
+    //     // echo $denomination." ".$address;
+    //     $insertLine = $dbh->prepare("INSERT INTO `client` (`id`, `nom`, `prenom`, `adresse`,`entreprise_id`)VALUES (NULL, '$fname', '$name', '$address','$societe')");
+    //     $insertLine->execute();
+    // }
+
+    ?>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">My mini CRM</a>
@@ -38,7 +53,7 @@
                 <input type="text" class="form-control" id="societe" placeholder="societe" name="societe">
             </div>
 
-            <button type="submit" class="btn btn-default">Enregistrer</button>
+            <button type="submit" name="button"class="btn btn-default">Enregistrer</button>
         </form>
     </div>
     <script src="node_modules/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
