@@ -16,8 +16,8 @@
             print_r($array);
             echo '</pre>';
         }
-        $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
-        $lignes = $dbh->query('SELECT * from client WHERE entreprise_id=2');
+        $dbh = new PDO('mysql:host=localhost;dbname=crm2', 'admin', 'xu10j4rs');
+        $lignes = $dbh->query('SELECT * from client WHERE entreprise_id=3');
 
         foreach ($lignes as $ligne) {
             debug($ligne);
