@@ -17,20 +17,24 @@
             print_r($array);
             echo '</pre>';
     }
-        $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
-        // $dbh = new PDO('mysql:host=localhost;dbname=crm2', 'admin', 'xu10j4rs');
-    //     $lignes = $dbh->query('SELECT * FROM client WHERE entreprise_id=2');
+        // $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
+        $dbh = new PDO('mysql:host=localhost;dbname=crm2', 'admin', 'xu10j4rs');
+    // //     $lignes = $dbh->query('SELECT * FROM client WHERE entreprise_id=2');
+    // //
+    // // foreach ($lignes as $ligne) {
+    // //     debug($ligne);
+    // // }
     //
-    // foreach ($lignes as $ligne) {
-    //     debug($ligne);
+    // // $clients = $dbh->query('SELECT * FROM client');
+    // foreach($nbresclients as $client){
+    //
+    //
+    //     $nbresclients= $dbh->query('SELECT * FROM client')->fetch();
+    //
     // }
 
-    $clients = $dbh->query('SELECT * FROM client where entreprise_id=1');
 
-    foreach($clients as $values){
 
-        debug($values);
-    }
 
 
     ?>
