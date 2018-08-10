@@ -11,9 +11,9 @@
 
 <body>
     <?php
-    // $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
-    $dbh = new PDO ('mysql:host=localhost;dbname=crm2','admin', 'xu10j4rs');
-    if (isset($_POST['name']) && isset($_POST['fname']) && isset($_POST['address']) && isset($_POST['societe'])){
+    $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
+    // $dbh = new PDO ('mysql:host=localhost;dbname=crm2','admin', 'xu10j4rs');
+    if (isset($_POST['name']) && (isset($_POST['fname'])) && (isset($_POST['address'])) && (isset($_POST['societe']))){
         $name=$_POST['name'];
         $fname=$_POST['fname'];
         $address=$_POST['address'];
