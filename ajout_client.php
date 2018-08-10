@@ -11,30 +11,25 @@
 
 <body>
     <?php
-    $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
-    // $dbh = new PDO ('mysql:host=localhost;dbname=crm2','admin', 'xu10j4rs');
-    if (isset($_POST['name']) && (isset($_POST['fname'])) && (isset($_POST['address'])) && (isset($_POST['societe']))){
+    // $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
+    $dbh = new PDO ('mysql:host=localhost;dbname=crm2','admin', 'xu10j4rs');
+    if (isset($_POST['name']) && isset($_POST['fname']) && isset($_POST['address']) && isset($_POST['societe'])){
         $name=$_POST['name'];
         $fname=$_POST['fname'];
         $address=$_POST['address'];
         $societe=$_POST['societe'];
-        $insertLine = $dbh->prepare("INSERT INTO 'client' VALUES (NULL, '$name', '$fname', '$address', '$societe')");
-        $insertLine->execute();
         echo $name;
         echo $fname;
         echo $address;
         echo $societe;
+        $insertLine = $dbh->prepare("INSERT INTO client VALUES (NULL, '$name', '$fname', '$address', $societe)");
+        $insertLine->execute();
 
     }
-    // if (isset($_POST['name'])&&(isset($_POST['fname'])&&(isset($_POST['address'])&&(isset($_POST['societe']))){
-    //     $name=$_POST['name'];
-    //     $fname=$_POST['fname'];
-    //     $address=$_POST['address'];
-    //     $societe=$_POST['societe'];
-    //     // echo $denomination." ".$address;
-    //     $insertLine = $dbh->prepare("INSERT INTO `client` (`id`, `nom`, `prenom`, `adresse`,`entreprise_id`)VALUES (NULL, '$name', '$fname', '$address', '$societe')");
-    //     $insertLine->execute();
-    // }
+
+    
+    $nom_entreprises = $dbh->query('SELECT * FROM entreprise')->fetch();
+    print_r($nom_entreprises);
 
     ?>
     <div class="container">
@@ -59,10 +54,21 @@
         <h2>Mise à jour de Thibault</h2>
         <form method="post">
             <div class="form-group">
-                <input type="text" class="form-control" id="name" placeholder="name" name="name">
-                <input type="text" class="form-control" id="fname" placeholder="fname" name="fname">
-                <input type="text" class="form-control" id="address" placeholder="address" name="address">
+                <input type="text" class="form-control" id="name" placeholder="Nom" name="name">
+                <input type="text" class="form-control" id="fname" placeholder="Prénom" name="fname">
+                <input type="text" class="form-control" id="address" placeholder="Adresse" name="address">
                 <input type="text" class="form-control" id="societe" placeholder="societe" name="societe">
+                <!-- <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Choisissez votre entreprise</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div> -->
             </div>
 
             <button type="submit" name="button" class="btn btn-default">Enregistrer</button>

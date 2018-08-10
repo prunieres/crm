@@ -12,8 +12,8 @@
 
 <body>
     <?php
-    $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
-    // $dbh = new PDO ('mysql:host=localhost;dbname=crm2','admin', 'xu10j4rs');
+    // $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
+    $dbh = new PDO ('mysql:host=localhost;dbname=crm2','admin', 'xu10j4rs');
 
     if (isset($_POST['denomination'])&&(isset($_POST['address']))){
         $denomination=$_POST['denomination'];
