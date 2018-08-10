@@ -11,16 +11,28 @@
 
 <body>
     <?php
-    $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
-    // $dbh = new PDO ('mysql:host=localhost;dbname=crm2','admin', 'xu10j4rs');
+    // $dbh = new PDO('mysql:host=localhost;dbname=CRM2', 'admin', 'plop');
+    $dbh = new PDO ('mysql:host=localhost;dbname=crm2','admin', 'xu10j4rs');
+    if (isset($_POST['name']) && isset($_POST['fname']) && isset($_POST['address']) && isset($_POST['societe'])){
+        $name=$_POST['name'];
+        $fname=$_POST['fname'];
+        $address=$_POST['address'];
+        $societe=$_POST['societe'];
+        $insertLine = $dbh->prepare("INSERT INTO 'client' VALUES (NULL, '$name', '$fname', '$address', '$societe')");
+        $insertLine->execute();
+        echo $name;
+        echo $fname;
+        echo $address;
+        echo $societe;
 
-    // if (isset($_POST['fname'])&&(isset($_POST['name'])&&(isset($_POST['address'])&&(isset($_POST['societe']))){
-    //     $fname=$_POST['fname'];
+    }
+    // if (isset($_POST['name'])&&(isset($_POST['fname'])&&(isset($_POST['address'])&&(isset($_POST['societe']))){
     //     $name=$_POST['name'];
+    //     $fname=$_POST['fname'];
     //     $address=$_POST['address'];
     //     $societe=$_POST['societe'];
     //     // echo $denomination." ".$address;
-    //     $insertLine = $dbh->prepare("INSERT INTO `client` (`id`, `nom`, `prenom`, `adresse`,`entreprise_id`)VALUES (NULL, '$fname', '$name', '$address','$societe')");
+    //     $insertLine = $dbh->prepare("INSERT INTO `client` (`id`, `nom`, `prenom`, `adresse`,`entreprise_id`)VALUES (NULL, '$name', '$fname', '$address', '$societe')");
     //     $insertLine->execute();
     // }
 
@@ -45,15 +57,15 @@
             </div>
         </nav>
         <h2>Mise à jour de Thibault</h2>
-        <form action="">
+        <form method="post">
             <div class="form-group">
-                <input type="text" class="form-control" id="fname" placeholder="fname" name="fname">
                 <input type="text" class="form-control" id="name" placeholder="name" name="name">
+                <input type="text" class="form-control" id="fname" placeholder="fname" name="fname">
                 <input type="text" class="form-control" id="address" placeholder="address" name="address">
                 <input type="text" class="form-control" id="societe" placeholder="societe" name="societe">
             </div>
 
-            <button type="submit" name="button"class="btn btn-default">Enregistrer</button>
+            <button type="submit" name="button" class="btn btn-default">Enregistrer</button>
         </form>
     </div>
     <script src="node_modules/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
